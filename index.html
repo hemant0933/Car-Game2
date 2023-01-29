@@ -57,7 +57,7 @@
   </head>
   <body>
     <div class="plate">
-      <form method="post" id="signup">
+      <form method="get"  id="signup">
         <h1 class="mb-5 fw-bolder text-white">SignUp Form</h1>
         <div class="form-floating mb-3 w-75">
           <input
@@ -103,7 +103,7 @@
       let input_username = document.getElementsByTagName('input')[1]
       let input_password = document.getElementsByTagName('input')[2]
 
-      signupForm.addEventListener('submit',signupValidation);
+      signupForm.addEventListener('submit', signupValidation);
         let arr = []
 
       function signupValidation(e){
