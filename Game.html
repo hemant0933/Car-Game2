@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Game</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+      }
+      .top-bar .leaderboard {
+        background-color: #fff;
+        color: #000;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .top-bar .leaderboard a {
+        text-decoration: none;
+        color: rgb(158, 20, 128);
+      }
+      .gameArea .startScreen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+        background-color: #000;
+        color: #fff;
+      }
+      .hide {
+        display: none !important;
+      }
+      .car {
+        position: absolute;
+        height: 120px;
+        width: 60px;
+        border-radius: 20px;
+        bottom: 120px;
+        margin: auto;
+        z-index: 600;
+        background-color: rgb(211, 234, 61);
+        background-image: url(/car.png);
+        background-size: cover;
+      }
+      .enemy {
+        position: absolute;
+        height: 120px;
+        width: 60px;
+        border-radius: 20px;
+        bottom: 120px;
+        margin: auto;
+        z-index: 600;
+        /* background-color: rgb(90, 9, 183); */
+        background-image: url(/car.png);
+        background-size: cover;
+      }
+      .line {
+        position: absolute;
+        height: 100px;
+        width: 10px;
+        z-index: 500;
+        margin-left: 204px;
+        background-color: white;
+      }
+      .gameScreen {
+        background-color: rgb(39, 38, 38);
+        width: 450px;
+        height: 90vh;
+        position: relative;
+        margin: auto;
+        border-left: 7px dashed red;
+        border-right: 7px dashed red;
+        overflow: hidden;
+      }
+      .roadside{
+        background-image: url(https://img.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg?w=1380&t=st=1675002144~exp=1675002744~hmac=042aef0c383f4b2efd59cee10339d11540ef5b8a0ada831f35ab097bda2f99ab);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="user-name">Hemant 😎😎</div>
+      <div class="score-section">Score: <span class="score">0</span></div>
+      <div class="lives">Highest Score: 2478</div>
+      <div class="leaderboard">
+        <a href="#">LeaderBoard</a>
+      </div>
+    </div>
+    <div class="gameArea">
+      <div class="startScreen">
+        <h1>Welcome to Game Screen</h1>
+        <p>Click anywhere to start the game</p>
+      </div>
+      <div class="roadside">
+      <div class="gameScreen hide"></div></div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
