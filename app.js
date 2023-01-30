@@ -46,13 +46,13 @@ function moveCars(car) {
     // if player car bottm hits other car top
     // if player car top hits ,or car left hits, or the player car right hits other car
     if (
-      !(car.bottom < other.top) ||
+      (!(car.bottom < other.top) ||
       (car.top > other.bottom) ||
       (car.left > other.right) ||
       (car.right < other.left)
-    ) {
+    )) {
       //    stop driving
-        
+        player.start = false;
     }
     if (item.y >= 750) {
       item.y = -300;
