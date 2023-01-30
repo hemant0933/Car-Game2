@@ -38,7 +38,7 @@ function endGame() {
 function moveCars(car) {
   let enemy = document.querySelectorAll(".enemy");
 
-//   car = car.getBoundingClientRect();
+    let  car1 = car.getBoundingClientRect();
   enemy.forEach(function (item) {
     // check if player car collides
 
@@ -46,12 +46,13 @@ function moveCars(car) {
     // if player car bottm hits other car top
     // if player car top hits ,or car left hits, or the player car right hits other car
     if (
-      !(car.bottom < other.top) ||
-      (car.top > other.bottom) ||
-      (car.left > other.right) ||
-      (car.right < other.left)
+      !((car1.bottom < other.top) ||
+      (car1.top > other.bottom) ||
+      (car1.left > other.right) ||
+      (car1.right < other.left))
     ) {
       //    stop driving
+      player.start = false;
         
     }
     if (item.y >= 750) {
